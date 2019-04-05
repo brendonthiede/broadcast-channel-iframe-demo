@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Broadcast Channel Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"><iframe src="header.html" frameborder="0" scrolling="no" seamless="seamless"></iframe></div>
+        <div class="main"><iframe src="main.html" frameborder="0"></iframe></div>
+        <div class="sidebar"><iframe src="sidebar.html" frameborder="0"></iframe></div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        broadcastChannel.onmessage = function (event) {
+            if (event.data.type === 'frameReady' && event.data.body === 'main') {
+                setContent('About');
+            }
+        };
+    </script>
+</body>
+
+</html>
