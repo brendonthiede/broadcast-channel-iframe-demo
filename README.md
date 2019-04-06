@@ -1,5 +1,7 @@
 # Broadcast Channel Demo
 
+You can try this demo out at [http://www.digestibledevops.com/broadcast-channel-iframe-demo/](http://www.digestibledevops.com/broadcast-channel-iframe-demo/)
+
 This is a simple example of using the [Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API), currently available in Chrome and Firefox. This API uses [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) behind the scenes, and can allow communication between different windows, tabs, frames, and iframes with the same origin, something that typically would have been done through AJAX requests in the past.
 
 ## Basic Usage
